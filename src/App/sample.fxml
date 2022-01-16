@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #37474f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+    <children>
+        <Button id="goButton" fx:id="goButton" layoutX="291.0" layoutY="5.0" mnemonicParsing="false" onAction="#goButton" text="Go" textFill="WHITE">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Button>
+        <TextField fx:id="zipField" layoutX="110.0" layoutY="10.0" onKeyPressed="#enterPress" onKeyTyped="#inputChange" prefHeight="23.0" prefWidth="169.0" promptText="Enter City, State or Zip" style="-fx-border-color: #26a69a; -fx-border-width: 2; -fx-border-radius: 1%;">
+            <font>
+                <Font size="11.0" />
+            </font></TextField>
+        <Label fx:id="zipCode" layoutX="13.0" layoutY="14.0" text="City or ZIP Code:" textFill="WHITE" />
+        <Label fx:id="W" alignment="CENTER" contentDisplay="CENTER" layoutX="144.0" layoutY="288.0" prefHeight="20.0" prefWidth="226.0" text="Weather" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="T" alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="81.0" prefHeight="94.0" prefWidth="120.0" text="Day 1" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="cAndS" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="55.0" prefHeight="30.0" prefWidth="359.0" style="-fx-text-transform: uppercase;" text="City and State" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Book Antiqua Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imageSpot" fitHeight="66.0" fitWidth="75.0" layoutX="221.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+        <Button id="degreeSign" fx:id="tempC" layoutX="349.0" layoutY="139.0" mnemonicParsing="false" onAction="#setTemp" text="℃" textAlignment="CENTER" textFill="WHITE" />
+        <Label fx:id="currentDewpointAndHeatindex" alignment="CENTER" layoutX="158.0" layoutY="184.0" prefHeight="18.0" prefWidth="198.0" text="Day 1 Higest and Lowest Temp" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="Day2" alignment="CENTER" layoutX="70.0" layoutY="345.0" text="Day 2" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="695.0" />
+        <Label fx:id="Day3" alignment="CENTER" layoutX="204.0" layoutY="345.0" text="Day 3" textFill="WHITE" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="570.0" />
+        <Label fx:id="Day4" alignment="CENTER" layoutX="367.0" layoutY="345.0" text="Day 4" textFill="WHITE" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="445.0" />
+        <Label fx:id="Day5" alignment="CENTER" layoutX="481.0" layoutY="345.0" text="Day 5" textFill="WHITE" AnchorPane.leftAnchor="445.0" AnchorPane.rightAnchor="320.0" />
+        <Label fx:id="Day6" alignment="CENTER" layoutX="601.0" layoutY="345.0" text="Day 6" textFill="WHITE" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="195.0" />
+        <Label fx:id="Day7" alignment="CENTER" layoutX="705.0" layoutY="345.0" prefHeight="7.0" prefWidth="33.0" text="Day 7" textFill="WHITE" AnchorPane.leftAnchor="695.0" AnchorPane.rightAnchor="70.0" />
+        <ImageView fx:id="imageSpot2" fitHeight="50.0" fitWidth="50.0" layoutX="63.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageSpot3" fitHeight="50.0" fitWidth="50.0" layoutX="188.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageSpot4" fitHeight="50.0" fitWidth="50.0" layoutX="313.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageSpot5" fitHeight="50.0" fitWidth="50.0" layoutX="435.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageSpot6" fitHeight="50.0" fitWidth="50.0" layoutX="563.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageSpot7" fitHeight="50.0" fitWidth="50.0" layoutX="688.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="T2" alignment="CENTER" layoutX="31.0" layoutY="420.0" prefHeight="15.0" prefWidth="113.0" text="Temp 2" textFill="WHITE" />
+        <Label fx:id="T3" alignment="CENTER" layoutX="155.0" layoutY="420.0" prefHeight="15.0" prefWidth="114.0" text="Temp 3" textFill="WHITE" />
+        <Label fx:id="T4" alignment="CENTER" layoutX="280.0" layoutY="420.0" prefHeight="15.0" prefWidth="114.0" text="Temp 4" textFill="WHITE" />
+        <Label fx:id="T5" alignment="CENTER" layoutX="403.0" layoutY="420.0" prefHeight="15.0" prefWidth="114.0" text="Temp 5" textFill="WHITE" />
+        <Label fx:id="T6" alignment="CENTER" layoutX="530.0" layoutY="420.0" prefHeight="15.0" prefWidth="114.0" text="Temp 6" textFill="WHITE" />
+        <Label fx:id="T7" alignment="CENTER" layoutX="655.0" layoutY="420.0" prefHeight="15.0" prefWidth="114.0" text="Temp 7" textFill="WHITE" />
+        <Label fx:id="W2" alignment="CENTER" layoutX="28.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 2" textFill="WHITE" wrapText="true" />
+        <Label fx:id="W3" alignment="CENTER" layoutX="152.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 3" textFill="WHITE" wrapText="true" />
+        <Label fx:id="W4" alignment="CENTER" layoutX="280.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 4" textFill="WHITE" wrapText="true" />
+        <Label fx:id="W5" alignment="CENTER" layoutX="403.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 5" textFill="WHITE" wrapText="true" />
+        <Label fx:id="W6" alignment="CENTER" layoutX="528.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 6" textFill="WHITE" wrapText="true" />
+        <Label fx:id="W7" alignment="CENTER" layoutX="653.0" layoutY="448.0" prefHeight="39.0" prefWidth="120.0" text="Weather 7" textFill="WHITE" wrapText="true" />
+        <ListView fx:id="listView" layoutX="109.0" layoutY="33.0" onMouseClicked="#click" prefHeight="191.0" prefWidth="170.0" visible="false" />
+        <Button id="autoButton" fx:id="auto" layoutX="344.0" layoutY="5.0" mnemonicParsing="false" onAction="#auto" text="Auto" textFill="WHITE" />
+        <ImageView fx:id="radarImage" fitHeight="256.0" fitWidth="256.0" layoutX="504.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="transparent" height="256.0" layoutX="504.0" layoutY="42.0" stroke="#26a69a" strokeType="INSIDE" strokeWidth="2.0" width="256.0" />
+      <Line endX="38.000030517578125" endY="45.5999755859375" layoutX="113.0" layoutY="298.0" startX="38.000030517578125" startY="182.0" stroke="#26a69a" strokeWidth="2.0" />
+      <Line endX="38.000030517578125" endY="45.5999755859375" layoutX="365.0" layoutY="298.0" startX="38.000030517578125" startY="182.0" stroke="#26a69a" strokeWidth="2.0" />
+      <Line endX="38.000030517578125" endY="45.5999755859375" layoutX="241.0" layoutY="298.0" startX="38.000030517578125" startY="182.0" stroke="#26a69a" strokeWidth="2.0" />
+      <Line endX="38.000030517578125" endY="45.5999755859375" layoutX="488.0" layoutY="298.0" startX="38.000030517578125" startY="182.0" stroke="#26a69a" strokeWidth="2.0" />
+      <Line endX="38.000030517578125" endY="45.5999755859375" layoutX="616.0" layoutY="298.0" startX="38.000030517578125" startY="182.0" stroke="#26a69a" strokeWidth="2.0" />
+        <Label fx:id="errorM" alignment="CENTER" layoutX="58.0" layoutY="340.0" prefHeight="143.0" prefWidth="684.0" style="-fx-background-color: #37474f;" text="Error Message" textAlignment="CENTER" textFill="#f9bd10" wrapText="true">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font></Label>
+    </children>
+</AnchorPane>

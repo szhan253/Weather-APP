@@ -1,0 +1,18 @@
+Button#goButton, #autoButton, #degreeSign{
+    -fx-background-radius: 50%;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-border-color: white;
+    -fx-label-padding: 5px;
+    -fx-cursor: hand;
+}
+
+Button#goButton:hover, #autoButton:hover, #degreeSign:hover{
+    -fx-background-radius: 50%;
+    -fx-label-padding: 5px;
+    -fx-border-radius: 10%;
+    -fx-border-color: transparent;
+    -fx-text-fill: #37474f;
+    -fx-background-color: white;
+}
